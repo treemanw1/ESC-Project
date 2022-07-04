@@ -57,7 +57,6 @@ const Hotel = () => {
     <div>
       <div className="background">
         <Navbar />
-        <Header type="list" />
         <div className="hotelContainer">
           {open && (
             <div className="slider">
