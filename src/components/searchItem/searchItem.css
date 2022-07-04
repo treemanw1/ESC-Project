@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
-.fa-cog {
-  color: green;
-}
-
 .searchItem {
   display: flex;
   justify-content: space-between;

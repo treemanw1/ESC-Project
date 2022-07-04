@@ -9,11 +9,12 @@
 
 .navContainer {
   width: 100%;
-  max-width: 1024px;
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .childLogoContainer {
