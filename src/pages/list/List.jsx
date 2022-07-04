@@ -39,8 +39,8 @@ const List = () => {
                 </div>
 
                 <div className="headerSearchItem1">
-                    <div className="spaceItem">DISTANCE TO CENTER</div>
-                    <div className="backgroundItem">
+                  <div className="spaceItem">DISTANCE TO CENTER</div>
+                  <div className="backgroundItem">
                     <label class="form-control">
                       <input type="checkbox" name="checkbox" />
                       Inside city center

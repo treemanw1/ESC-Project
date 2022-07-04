@@ -1,11 +1,13 @@
-.navbar{
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.navbar {
   height: 50px;
   background-color: rgba(7, 5, 5, 0.5);
   display: flex;
   justify-content: center;
 }
 
-.navContainer{
+.navContainer {
   width: 100%;
   max-width: 1024px;
   color: white;
@@ -14,11 +16,24 @@
   justify-content: space-between;
 }
 
-.logo{
-  font-weight: 500;
+.childLogoContainer {
+  display: flex;
+  align-items: center;
+  gap:5px;
 }
 
-.navButton{
+.logo {
+  font-size:13px;
+  font-family: "Poppins";
+}
+.logoImage {
+  height: 35px;
+  width: 35px;
+  display: flex;
+  flex-direction: row;
+}
+
+.navButton {
   font-size: 12px;
   margin-left: 20px;
   border: none;

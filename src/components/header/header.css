@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 
 .header {
-  background-color: #389464;
+  background-color: rgb(76, 148, 98,1);
   display: flex;
   justify-content: center;
   position: relative;
