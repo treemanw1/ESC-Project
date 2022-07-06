@@ -1,3 +1,10 @@
+body {
+    /* background-image: url(../../components/navbar/background.jpeg); */
+    /* background-image: url(../../components/navbar/background3.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .hotelDetails {
     position:relative;
     top:-10px;

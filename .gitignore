@@ -2,6 +2,7 @@
 
 # my stuff
 /package-og.json
+/client/.env
 
 # bfg stuff
 passwords.txt
