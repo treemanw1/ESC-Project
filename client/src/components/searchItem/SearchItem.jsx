@@ -1,33 +1,34 @@
 import "./searchItem.css";
 
-const SearchItem = ({onBookClick}) => {
+const SearchItem = ({name, address, distance, rating, handleBookNow}) => {
   return (
     <div className="searchItem">
-      <img
+      <img className="siImg"
         src="https://static.wixstatic.com/media/77f58e_3ae21cb6dd5a4896a9a76906f6a6d958~mv2.png"
         alt=""
-        className="siImg"
       />
       <div className="siDesc">
-        <h1 className="siTitle">Shangri-La Singapore</h1>
+        <h1 className="siTitle">{name}</h1>
+        <span className="siSubtitle">{address}</span>
         <span className="siSubtitle">
-          22 Orange Grove 
+          {rating} stars
         </span>
-        <span className="siDistance">14.4 km from city centre</span>
-        
-        
-        <span className="siFeatures">
-          Show on map
-        </span>
-        
+
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+          crossOrigin="anonymous"
+        ></link>
+        <button className="siFeatures">
+          <i class="fas fa-location-arrow fa-fw"></i> Show on Map
+        </button>
       </div>
       <div className="siDetails">
-        
         <div className="siDetailTexts">
           <span className="siPrice">SGD 1360</span>
           <span className="roomDetails">1 room, 3 nights</span>
-          <button className="siCheckButton" onClick={onBookClick}>Book Now</button>
         </div>
+        <button className="siCheckButton" onClick={handleBookNow}>Book Now</button>
       </div>
     </div>
   );

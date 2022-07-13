@@ -1,18 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
 .searchItem {
-  border: 1px solid lightgray;
-  
-  border-radius: 5px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 20px;
+  background-color: white;
+  align-items: center;
+  height:200px;
 }
+
 
 .siImg {
   width: 40%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
 }
+
 
 .siDesc {
   display: flex;
@@ -22,80 +26,67 @@
 }
 
 .siTitle {
-  font-size: 22px;
-  color: #36454F;
+  font-size: 18px;
+  font-weight: 200;
+  font-family: "Poppins";
 }
 
 .siDistance {
   font-size: 16px;
 }
 
-
-
-.siSubtitle{
+.siSubtitle {
   font-size: 16px;
 }
 
-.siFeatures{
+.siFeatures {
+  background: none;
+  border: none;
+  text-align: left;
+  color: #1d67cd;
+  cursor: pointer;
   font-size: 16px;
-  color: #003580;
-}
-
-.siCancelOp{
-  font-size: 12px;
-  color: #008009;
-  font-weight: bold;
-}
-
-.siCancelOpSubtitle{
-  font-size: 12px;
-  color: #008009;
+  line-height: 0;
 }
 
 .siDetails {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background-color: #ffffff;
-  justify-content: space-between
-  
+  padding: 20px 20px 20px 0px;
+  justify-content: space-between;
 }
 
-.siRating{
+.siRating {
   display: flex;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
-.siRating>span{
+.siRating > span {
   font-weight: 500;
 }
-.siRating>button{
- background-color: #386150;
- color: white;
- padding: 5px;
- font-weight: bold;
- border: none;
+.siRating > button {
+  background-color: #386150;
+  color: white;
+  padding: 5px;
+  font-weight: bold;
+  border: none;
 }
 
-.siDetailTexts{
-  text-align: right;
+.siDetailTexts {
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-bottom: 10px;
 }
 
-.siPrice{
+.siPrice {
   font-size: 24px;
 }
 
-.siTaxOp{
-  font-size: 12px;
-  color: gray;
-}
-
-.siCheckButton{
-  background-color: #389464;
+.siCheckButton {
+  background: rgb(76, 148, 98,1);
   color: white;
   font-weight: bold;
   padding: 10px 5px;
@@ -104,6 +95,6 @@
   border-radius: 5px;
 }
 
-.roomDetails{
+.roomDetails {
   font-size: 16px;
 }
