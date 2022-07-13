@@ -1,8 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DestinationSearchPage from "./pages/Destination search page/DestinationSearchPage";
 import HotelSearchPage from "./pages/Hotel search page/HotelSearchPage";
 import HotelDetails from "./pages/Hotel details/HotelDetails";
@@ -13,11 +9,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<DestinationSearchPage/>} />
-        <Route path="/HotelSearch" element={<HotelSearchPage/>}/>
-        <Route path="/HotelDetails" element={<HotelDetails/>}/>
-        <Route path="/hotels" element={<List/>}/>
-        <Route path="/hotels/:id" element={<Hotel/>}/>
+        <Route path="/" element={<DestinationSearchPage />} />
+        <Route path="/HotelDetails" element={<HotelDetails />} />
+        <Route path="/hotels" element={<List />} />
+        <Route path="/hotels/:id" element={<Hotel />} />
       </Routes>
     </BrowserRouter>
   );
