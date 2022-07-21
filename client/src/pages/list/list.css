@@ -7,6 +7,8 @@
 .listContainer {
   display: flex;
   justify-content: center;
+  /* decide whether to have white/no background */
+  background-color: none;
 }
 
 .listWrapper {
@@ -83,18 +85,20 @@
 
 .filter {
   flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.75);
   justify-content: left;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 15px;
   padding-right: 15px;
   margin-top: 10px;
+  
 }
 
 .headerSearchItem1 {
   gap: 10px;
   color: black;
+  margin-bottom: 10px;
 }
 
 .spaceItem {
@@ -122,14 +126,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins";
 }
 
-.form-control {
+.form-group {
   font-size: 13px;
   display: grid;
-  grid-template-columns: 1em auto;
+  grid-template-columns: 15px auto;
   line-height: 2;
-  gap: 0.5em;
+  gap: 7px;
+  font-family: "Poppins";
+}
+
+.form-group-rating {
+  display: grid;
+  grid-template-columns: 15px auto;
+  gap: 5px;
 }
 
 .backgroundItem {
@@ -154,3 +166,4 @@
   color: black;
   align-items: left;
 }
+

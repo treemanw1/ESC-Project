@@ -7,21 +7,22 @@
   margin-bottom: 20px;
   background-color: white;
   align-items: center;
-  height:200px;
+  height: 200px;
+  border-radius: 5px;
 }
-
 
 .siImg {
   width: 40%;
   height: 200px;
   object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
-
 
 .siDesc {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 7px;
   flex: 2;
 }
 
@@ -86,7 +87,7 @@
 }
 
 .siCheckButton {
-  background: rgb(76, 148, 98,1);
+  background: rgb(76, 148, 98, 1);
   color: white;
   font-weight: bold;
   padding: 10px 5px;
@@ -95,6 +96,6 @@
   border-radius: 5px;
 }
 
-.roomDetails {
+.siSubDetails {
   font-size: 16px;
 }

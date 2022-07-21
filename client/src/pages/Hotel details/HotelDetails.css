@@ -2,17 +2,74 @@
   background-color: rgba(255, 255, 255, 0.6);
 }
 
-.hotelDetails {
+.hotelDetailsResult {
+  background-color: white;
+  border-radius: 5px;
   margin: 20px;
 }
 
-.hotelDetailsContainer {
+.hotelDetailsWrapper {
+  height: auto;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.hdImg {
+  /* min-width: 35%; */
+  max-width: 34.5%;
+  height: auto;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.hdTitle {
+  font-size: 25px;
+  color: black;
+  font-family: "Poppins";
+  margin-top: 10px;
+}
+
+.hdSubtitle {
+  color: black;
+  font-family: "Poppins";
+  margin-top: 10px;
+}
+
+.hdRating {
+  font-family: "Poppins";
+  margin-bottom: 10px;
+}
+
+.hdInfo {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: "Poppins";
+}
+
+.hdFeatures {
+  background: none;
+  border: none;
+  text-align: left;
+  color: #1d67cd;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 0;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.hotelRoomsContainer {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.hotelDetailsWrapper {
+.hotelRoomsWrapper {
   width: 100%;
   display: flex;
   gap: 20px;
@@ -28,12 +85,6 @@
   height: max-content;
 }
 
-.hotelDetailsTitle {
-  font-size: 20px;
-  color: #555;
-  margin-bottom: 10px;
-}
-
 .hotelDetailsSearch > button {
   padding: 10px;
   background-color: #0071c2;
@@ -44,6 +95,10 @@
   cursor: pointer;
 }
 
-.hotelDetailsResult {
+.hotelRoomsResult {
+  flex: 2;
+}
+
+.roomResult {
   flex: 2;
 }

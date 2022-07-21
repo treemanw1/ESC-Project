@@ -1,17 +1,16 @@
 import "./list.css";
 import Navbar from "../../components/navbar/Navbar";
 import Header from "../../components/header/Header";
+import Map from "../../components/map/Map";
+import Star from "../../components/star/Star";
+import SearchItem from "../../components/searchItem/SearchItem";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { format } from "date-fns";
-import { DateRange } from "react-date-range";
-import SearchItem from "../../components/searchItem/SearchItem";
 import { Button } from "react-bootstrap";
 import { hotelList } from "./info.jsx";
-import Map from "../../components/map/Map";
 import { GoogleMap, useLoadScript, Marker } from "@react-google-maps/api";
 
-const imagePerRow = 5;
+const imagePerRow = 7;
 const List = () => {
   const location = useLocation();
   const [destination, setDestination] = useState(location.state.destination);
@@ -63,29 +62,69 @@ const List = () => {
                 </div>
 
                 <div className="headerSearchItem1">
+                  <div className="spaceItem">RATING</div>
+                  <div className="backgroundItem">
+                    <label class="form-group-rating">
+                      <input type="checkbox" name="checkbox" />
+                      <div>
+                        <Star rating={5}></Star>
+                      </div>
+                    </label>
+
+                    <label class="form-group-rating">
+                      <input type="checkbox" name="checkbox-checked" />
+                      <div>
+                        <Star rating={4}></Star>
+                      </div>
+                    </label>
+
+                    <label class="form-group-rating">
+                      <input type="checkbox" name="checkbox-checked" />
+                      <div>
+                        <Star rating={3}></Star>
+                      </div>
+                    </label>
+
+                    <label class="form-group-rating">
+                      <input type="checkbox" name="checkbox-checked" />
+                      <div>
+                        <Star rating={2}></Star>
+                      </div>
+                    </label>
+
+                    <label class="form-group-rating">
+                      <input type="checkbox" name="checkbox-checked" />
+                      <div>
+                        <Star rating={1}></Star>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="headerSearchItem1">
                   <div className="spaceItem">DISTANCE TO CENTER</div>
                   <div className="backgroundItem">
-                    <label class="form-control">
+                    <label class="form-group">
                       <input type="checkbox" name="checkbox" />
                       Inside city center
                     </label>
 
-                    <label class="form-control">
+                    <label class="form-group">
                       <input type="checkbox" name="checkbox-checked" />
                       less than 2 km to center
                     </label>
 
-                    <label class="form-control">
+                    <label class="form-group">
                       <input type="checkbox" name="checkbox-checked" />
                       2-5 km to center
                     </label>
 
-                    <label class="form-control">
+                    <label class="form-group">
                       <input type="checkbox" name="checkbox-checked" />
                       5-10 km to center
                     </label>
 
-                    <label class="form-control">
+                    <label class="form-group">
                       <input type="checkbox" name="checkbox-checked" />
                       more than 10 km to center
                     </label>
@@ -103,6 +142,7 @@ const List = () => {
                       address={data.address}
                       distance={data.distance}
                       rating={data.rating}
+                      price={1360}
                       handleBookNow={handleBookNow}
                     />
                   </div>

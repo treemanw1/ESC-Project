@@ -1,0 +1,158 @@
+import React, { useState } from "react";
+import Navbar from "../../components/navbar/Navbar";
+import "./book.css";
+
+const Book = () => {
+  const [booking, setBooking] = useState({
+    firstname: "",
+    lastname: "",
+    phonenumber: "",
+    emailaddress: "",
+    creditcardnumber: "",
+    expirydate: "",
+    cvv: "",
+  });
+
+  let field, value;
+
+  const handleInputs = (e) => {
+    console.log(e);
+    field = e.target.id;
+    value = e.target.value;
+
+    setBooking({ ...booking, [field]: value });
+  };
+
+  const postData = async (e) => {
+    e.preventDefault();
+    const {
+      firstname,
+      lastname,
+      phonenumber,
+      emailaddress,
+      creditcardnumber,
+      expirydate,
+      cvv,
+    } = booking;
+
+    const res = await fetch("/book", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        firstname,
+        lastname,
+        phonenumber,
+        emailaddress,
+        creditcardnumber,
+        expirydate,
+        cvv,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (res.status === 422 || !data) {
+      window.alert("Booking Unsuccesful");
+      console.log("Booking Unsuccesful");
+    } else {
+      window.alert("Success");
+      console.log("Success");
+    }
+  };
+
+  return (
+    <div>
+      <Navbar />
+      <div className="bookingContainer">
+        <div className="bookingChildContainer">
+          <div className="heading">Booking Details</div>
+          <div className="guestInfoContainer">
+            {/* <div className="info">Your Information</div> */}
+            <section>
+              <form method="POST">
+                {/* <div className="subHeading">Your Information</div> */}
+                <div>
+                  <label for="firstname">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstname"
+                    value={booking.firstname}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div>
+                  <label for="lastname">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastname"
+                    value={booking.lastname}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div>
+                  <label for="phonenumber">Phone Number</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phonenumber"
+                    value={booking.phonenumber}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div>
+                  <label for="emailaddress">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailaddress"
+                    value={booking.emailaddress}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div>
+                  <label for="creditcardnumber">Credit Card Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="creditcardnumber"
+                    value={booking.creditcardnumber}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div>
+                  <label for="expirydate">Expiry Date</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expirydate"
+                    value={booking.expirydate}
+                    onChange={handleInputs}
+                  />
+                </div>
+                <div>
+                  <label for="cvv">CVV</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="cvv"
+                    value={booking.cvv}
+                    onChange={handleInputs}
+                  />
+                </div>
+              </form>
+            </section>
+            <button type="submit" className="submitButton" onClick={postData}>
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Book;
